@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Inspiration Gallery</title>
+</head>
+<body>
+    <h1>Inspiration Gallery</h1>
+    <ul>
+        {% for inspiration in inspirations %}
+            <li>
+                <h2>{{ inspiration.title }}</h2>
+                <p>{{ inspiration.description }}</p>
+                {% if inspiration.image_url %}
+                    <img src="{{ inspiration.image_url }}" alt="{{ inspiration.title }}">
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

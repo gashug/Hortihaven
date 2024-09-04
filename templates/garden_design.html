@@ -1,0 +1,62 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garden Design Canvas</title>
+    <link rel="stylesheet" href="{% static 'css/garden_design.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Garden Design Canvas</h1>
+    </header>
+    <main>
+        <div id="plant-library"> -->
+            <!-- Plant items will be added dynamically here -->
+        <!-- </div> -->
+        <!-- <div id="garden-design-canvas"> -->
+            <!-- This is where users will drag and drop plants to design their garden -->
+        <!-- </div> -->
+    <!-- </main> -->
+    <!-- <script src="{% static 'js/garden_design.js' %}"></script> -->
+<!-- </body> -->
+<!-- </html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Garden Design Canvas</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'designs/css/garden_design.css' %}">
+    <script src="{% static 'js/garden_design.js' %}" defer></script>
+</head>
+<body>
+    <header>
+        {% include 'components/header.html' %}
+    </header>
+    
+    <main>
+        <h1>Design Your Garden</h1>
+        <div id="garden-canvas">
+            <!-- Canvas for drag-and-drop functionality -->
+        </div>
+        <aside>
+            <h2>Available Plants</h2>
+            <ul id="plant-list">
+                {% for plant in plants %}
+                <li data-id="{{ plant.id }}" class="plant-item">
+                    <img src="{% static 'images/plant_images/'|add:plant.image %}" alt="{{ plant.name }}">
+                    <span>{{ plant.name }}</span>
+                </li>
+                {% endfor %}
+            </ul>
+        </aside>
+    </main>
+
+    <footer>
+        {% include 'components/footer.html' %}
+    </footer>
+</body>
+</html>

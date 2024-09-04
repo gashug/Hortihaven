@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HortiHaven - Home</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h1><a href="index.html">HortiHaven</a></h1>
+            <nav>
+                <ul>
+                    <li><a href="{% url 'index' %}">Plant List</a></li>
+                    <li><a href="{% url 'index' %}">Garden Design</a></li>
+                    <li><a href="inspiration_gallery.html">Inspiration Gallery</a></li>
+                    <li><a href="planting_schedule.html">Planting Schedule</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <section class="hero">
+            <img src="../static/images/hero_image.jpg" alt="Hero Image">
+            <h2>Welcome to HortiHaven</h2>
+            <p>Your go-to place for garden inspiration and design.</p>
+        </section>
+
+        <section class="features">
+            <h2>Features</h2>
+            <div class="feature">
+                <a href="plant_list.html">
+                    <h3>Plant List</h3>
+                    <p>Browse our extensive plant library.</p>
+                </a>
+            </div>
+            <div class="feature">
+                <a href="garden_design.html">
+                    <h3>Garden Design</h3>
+                    <p>Design your dream garden with our interactive tool.</p>
+                </a>
+            </div>
+            <div class="feature">
+                <a href="inspiration_gallery.html">
+                    <h3>Inspiration Gallery</h3>
+                    <p>Get inspired by beautiful garden designs.</p>
+                </a>
+            </div>
+            <div class="feature">
+                <a href="planting_schedule.html">
+                    <h3>Planting Schedule</h3>
+                    <p>Organize your planting and care schedule.</p>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 HortiHaven. All rights reserved.</p>
+            <p><a href="contact.html">Contact Us</a></p>
+        </div>
+    </footer>
+
+    <script src="../static/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ plant.name }}</title>
+    <link rel="stylesheet" href="{% static 'css/plant_detail.css' %}">
+</head>
+<body>
+    <!-- Include header component -->
+    {% include 'components/header.html' %}
+    <main>
+        <h1>{{ plant.name }}</h1>
+        <p>This is a debug message to ensure the template is rendering.</p>
+        <p><strong>Family:</strong> {{ plant.family }}</p>
+        <p><strong>Description:</strong> {{ plant.description }}</p>
+        <p><strong>Sunlight Requirements:</strong> {{ plant.sunlight_requirements }}</p>
+        <p><strong>Water Requirements:</strong> {{ plant.water_requirements }}</p>
+        <p><strong>Soil Requirements:</strong> {{ plant.soil_requirements }}</p>
+        <p><strong>Planting Season:</strong> {{ plant.planting_season }}</p>
+        <p><strong>Harvest Time:</strong> {{ plant.harvest_time }} days</p>
+        <a href="{% url 'index' %}">Back to Plant List</a>
+    </main>
+
+    <!-- Include footer component -->
+    {% include 'components/footer.html' %}
+</body>
+</html>

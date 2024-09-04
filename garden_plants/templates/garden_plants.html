@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant List</title>
+    <link rel="stylesheet" href="../static/css/styles.css">
+</head>
+<body>
+    <!-- Include header component -->
+    {% include 'components/header.html' %}
+
+    <main>
+        <h1>Plant List</h1>
+        
+        <div class="plant-list">
+            {% for plant in plants %}
+                <div class="plant-card">
+                    <h2>{{ plant.name }}</h2>
+                    <p><strong>Family:</strong> {{ plant.family }}</p>
+                    <p>{{ plant.description|slice:":150" }}{% if plant.description|length > 150 %}...{% endif %}</p>
+                    <a href="{% url 'plant_detail' plant.id %}">View Details</a>
+                </div>
+            {% empty %}
+                <p>No plants available.</p>
+            {% endfor %}
+        </div>
+    </main>
+
+    <!-- Include footer component -->
+    {% include 'components/footer.html' %}
+
+    <script src="../static/js/plant_list.js"></script>
+</body>
+</html>
+

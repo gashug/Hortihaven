@@ -1,0 +1,43 @@
+/* Basic styles for the garden canvas */
+#garden-canvas {
+    width: 100%;
+    height: 600px; /* Adjust height as needed */
+    border: 2px dashed #4CAF50;
+    position: relative;
+    background-color: #f0f8f0;
+}
+
+/* Styles for the plant items in the list */
+#plant-list {
+    list-style-type: none;
+    padding: 0;
+}
+
+.plant-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    cursor: grab;
+}
+
+.plant-item img {
+    width: 50px; /* Adjust size as needed */
+    height: auto;
+    margin-right: 10px;
+}
+
+/* Styles for items placed on the canvas */
+.planted-item {
+    position: absolute;
+    border: 1px solid #333;
+    padding: 5px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.planted-item img {
+    width: 40px; /* Adjust size as needed */
+    height: auto;
+    display: block;
+}

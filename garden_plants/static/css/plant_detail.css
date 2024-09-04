@@ -1,0 +1,73 @@
+/* General Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Container Styles */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Plant Detail Styles */
+.plant-detail {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.plant-detail h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.plant-detail p {
+    margin: 10px 0;
+    font-size: 1.1em;
+    color: #555;
+}
+
+.plant-detail p strong {
+    color: #333;
+}
+
+/* Back Link Styles */
+.back-link {
+    display: inline-block;
+    margin-top: 20px;
+    font-size: 1.1em;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    .plant-detail {
+        padding: 15px;
+    }
+
+    .plant-detail h1 {
+        font-size: 2em;
+    }
+
+    .plant-detail p {
+        font-size: 1em;
+    }
+}

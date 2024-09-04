@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ garden_design.name }}</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header>
+        {% include 'components/header.html' %}
+    </header>
+    
+    <main>
+        <h1>{{ garden_design.name }}</h1>
+        <p>{{ garden_design.description }}</p>
+
+        <h2>Planted Items</h2>
+        <div id="garden-canvas">
+            {% for garden_plant in garden_design.garden_plants.all %}
+            <div class="planted-item" style="left: {{ garden_plant.position_x }}px; top: {{ garden_plant.position_y }}px;">
+                <img src="{% static 'images/plant_images/'|add:garden_plant.plant.image %}" alt="{{ garden_plant.plant.name }}">
+                <span>{{ garden_plant.plant.name }}</span>
+            </div>
+            {% endfor %}
+        </div>
+    </main>
+
+    <footer>
+        {% include 'components/footer.html' %}
+    </footer>
+</body>
+</html>

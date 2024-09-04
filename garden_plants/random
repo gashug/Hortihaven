@@ -1,0 +1,118 @@
+from garden_plants.models import Plant
+
+roots = [
+    {
+        "name": "Carrot",
+        "family": "Roots",
+        "description": "Carrots are crunchy, sweet root vegetables commonly used in salads, soups, and as snacks.",
+        "sunlight_requirements": "Full sun",
+        "water_requirements": "Regular watering, keep soil consistently moist",
+        "soil_requirements": "Loose, well-drained soil",
+        "planting_season": "Spring",
+        "harvest_time": 70
+    },
+    {
+        "name": "Beetroot",
+        "family": "Roots",
+        "description": "Beetroots are earthy-tasting root vegetables often used in salads, soups, and juices.",
+        "sunlight_requirements": "Full sun",
+        "water_requirements": "Regular watering, keep soil consistently moist",
+        "soil_requirements": "Well-drained soil",
+        "planting_season": "Spring",
+        "harvest_time": 60
+    },
+    {
+        "name": "Radish",
+        "family": "Roots",
+        "description": "Radishes are small, spicy root vegetables used in salads and as garnishes.",
+        "sunlight_requirements": "Full sun",
+        "water_requirements": "Regular watering, keep soil consistently moist",
+        "soil_requirements": "Well-drained soil",
+        "planting_season": "Spring",
+        "harvest_time": 30
+    },
+    {
+        "name": "Turnip",
+        "family": "Roots",
+        "description": "Turnips are round, white root vegetables with a slightly spicy flavor, used in soups and stews.",
+        "sunlight_requirements": "Full sun",
+        "water_requirements": "Regular watering, keep soil consistently moist",
+        "soil_requirements": "Well-drained soil",
+        "planting_season": "Spring",
+        "harvest_time": 60
+    },
+    {
+        "name": "Parsnip",
+        "family": "Roots",
+        "description": "Parsnips are sweet, nutty root vegetables often used in soups and roasted dishes.",
+        "sunlight_requirements": "Full sun",
+        "water_requirements": "Regular watering, keep soil consistently moist",
+        "soil_requirements": "Well-drained soil",
+        "planting_season": "Spring",
+        "harvest_time": 120
+    },
+    {
+        "name": "Sweet Potato",
+        "family": "Roots",
+        "description": "Sweet potatoes are sweet, starchy tubers used in various dishes from casseroles to pies.",
+        "sunlight_requirements": "Full sun",
+        "water_requirements": "Regular watering, keep soil consistently moist",
+        "soil_requirements": "Well-drained, sandy soil",
+        "planting_season": "Spring",
+        "harvest_time": 90
+    },
+    {
+        "name": "Jicama",
+        "family": "Roots",
+        "description": "Jicama is a crunchy, sweet root vegetable often used in salads and as a raw snack.",
+        "sunlight_requirements": "Full sun",
+        "water_requirements": "Regular watering, keep soil consistently moist",
+        "soil_requirements": "Well-drained soil",
+        "planting_season": "Spring",
+        "harvest_time": 150
+    },
+    {
+        "name": "Salsify",
+        "family": "Roots",
+        "description": "Salsify, also known as oyster plant, has a delicate flavor and is used in soups and stews.",
+        "sunlight_requirements": "Full sun",
+        "water_requirements": "Regular watering, keep soil consistently moist",
+        "soil_requirements": "Well-drained soil",
+        "planting_season": "Spring",
+        "harvest_time": 150
+    },
+    {
+        "name": "Horseradish",
+        "family": "Roots",
+        "description": "Horseradish is a pungent root used as a condiment in various dishes and sauces.",
+        "sunlight_requirements": "Full sun",
+        "water_requirements": "Regular watering, keep soil consistently moist",
+        "soil_requirements": "Well-drained soil",
+        "planting_season": "Spring",
+        "harvest_time": 180
+    },
+    {
+        "name": "Yam",
+        "family": "Roots",
+        "description": "Yams are starchy tubers with a mild, sweet flavor, often used in various cuisines around the world.",
+        "sunlight_requirements": "Full sun",
+        "water_requirements": "Regular watering, keep soil consistently moist",
+        "soil_requirements": "Well-drained soil",
+        "planting_season": "Spring",
+        "harvest_time": 180
+    }
+]
+
+for plant in roots:
+    Plant.objects.create(
+    name=plant["name"],
+    family="Roots",
+    description=plant["description"],
+    sunlight_requirements=plant["sunlight_requirements"],
+    water_requirements=plant["water_requirements"],
+    soil_requirements=plant["soil_requirements"],
+    planting_season=plant["planting_season"],
+    harvest_time=plant["harvest_time"]
+    )
+
+print("Legumes added successfully!")

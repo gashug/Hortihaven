@@ -1,0 +1,92 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+header, footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+header h1, footer p {
+    margin: 0;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Main Content */
+main {
+    padding: 2rem;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+/* Plant List Styles */
+.plant-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.plant-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 1rem;
+    width: calc(33.333% - 2rem); /* 3 columns layout with gap */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.plant-card h2 {
+    font-size: 1.5rem;
+    color: #333;
+    margin: 0 0 0.5rem;
+}
+
+.plant-card p {
+    margin: 0 0 1rem;
+}
+
+.plant-card a {
+    color: #007BFF;
+    font-weight: bold;
+}
+
+.plant-card a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .plant-card {
+        width: calc(50% - 1rem); /* 2 columns layout with gap */
+    }
+}
+
+@media (max-width: 480px) {
+    .plant-card {
+        width: 100%; /* Single column layout */
+    }
+}
+
+.hidden {
+    display: none;
+}
